@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Work Req3_PRO1001_Spiire</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!doctype html>
+<html lang="no">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spiire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+
+  <header>
+    <nav class="container nav" aria-label="Hovedmeny">
+      <a class="brand" href="#home"><strong>Spiire.</strong></a>
+
+      <button class="nav-toggle" aria-controls="menu" aria-expanded="false" aria-label="Åpne/lukk meny">
+        <span class="visually-hidden">Åpne/lukk meny</span> Meny
+      </button>
+
+      <div id="menu" class="menu">
+        <a href="#features-title">Om</a>
+        <a href="#form">Subscribe</a>
+        <a class="nav-cta" href="#funfacts">FunFacts</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero container hero--overlay">
+    <figure class="hero-media">
+      <img src="https://github.com/LinnSandra/Plant/blob/main/IMG_7675.jpeg?raw=true" alt="Strelitzia Nikolai">
+    </figure>
+    <div class="hero-copy">
+      <h1>Påminnelsen som får plantene til å <em>spiire.</em></h1>
+      <p>Ønsker du et hjem fylt av de nydeligste grønnplanter?</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <main id="main" class="main">
+      <section class="content" aria-labelledby="features-title">
+        <h2 id="features-title">Vi sender deg påminnelser som hjelper plantene å spiire.</h2>
+
+        <div id="features" class="cards">
+          <article class="card">
+            <h3>Stell</h3>
+            <p>Korte, klare rutiner for vann, gjødsel og jord. Du får en enkel ukeplan som faktisk er gjennomførbar.</p>
+          </article>
+          <article class="card">
+            <h3>Lys</h3>
+            <p>Plasser plantene etter vindusretning og sesong. Vi viser hvor de trives best og hva du bør unngå.</p>
+          </article>
+          <article class="card">
+            <h3>Ompotting</h3>
+            <p>Når det trengs og hvordan du gjør det. Riktig jord, riktig potte og et par triks som røttene kommer til å elske.</p>
+          </article>
+          <article class="card">
+            <h3>Påminnelser</h3>
+            <p>Små påminnelser som passer hverdagen din: vannings- og gjødslingsvarsel, støvtørking og månedlig helsesjekk.</p>
+          </article>
+        </div>
+
+        <section id="form" class="form-section" aria-labelledby="form-title">
+          <h2 id="form-title">Meld deg inn i Spiire for å motta dine personlige påminnelser</h2>
+          <p class="hint" id="form-desc">Felter merket * er påkrevd.</p>
+
+          <form action="#" method="post" aria-describedby="form-desc">
+            <fieldset>
+              <legend>Kontakt</legend>
+              <div class="grid">
+                <div class="field full">
+                  <label for="name">Fullt navn *</label>
+                  <input id="name" name="name" type="text" autocomplete="name" placeholder="Ditt Navn" required minlength="2">
+                  <p class="hint">Fornavn & Etternavn.</p>
+                </div>
+                <div class="field full">
+                  <label for="email">E-post *</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="din@epostadresse.com" required>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Sikkerhet</legend>
+              <div class="grid">
+                <div class="field full">
+                  <label for="password">Passord *</label>
+                  <input id="password" name="password" type="password" required minlength="8" pattern="(?=.*[A-Za-z])(?=.*\d).{8,}" aria-describedby="pwd-hint">
+                  <p id="pwd-hint" class="hint">Min. 8 tegn, må inneholde bokstaver og tall.</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="grid">
+                <div class="field">
+                  <label id="remind-label" for="rem-water">Hvilke påminnelser trenger du?</label>
+
+                  <div class="remind-group" role="group" aria-labelledby="remind-label">
+                    <input type="checkbox" id="rem-water" name="reminders[]" value="water">
+                    <label for="rem-water">Vanning</label>
+
+                    <input type="checkbox" id="rem-dust" name="reminders[]" value="dust">
+                    <label for="rem-dust">Tørke støv</label>
+
+                    <input type="checkbox" id="rem-fertilize" name="reminders[]" value="fertilize">
+                    <label for="rem-fertilize">Gjødsling</label>
+
+                    <input type="checkbox" id="rem-none" name="reminders[]" value="none">
+                    <label for="rem-none">Har ingen planter..</label>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="about">Hvilke planter trenger du hjelp til?</label>
+                  <textarea id="about" name="about" placeholder="monstera? pilea? gullranke?.."></textarea>
+                </div>
+
+                <fieldset class="field control-group role">
+                  <legend>Hva beskriver deg?</legend>
+                  <div class="light-group">
+                    <input type="radio" id="role-lite" name="role" value="lite" required>
+                    <label for="role-lite">Prøver å holde liv i plantene, men ikke så interessert</label>
+
+                    <input type="radio" id="role-ny" name="role" value="ny">
+                    <label for="role-ny">Akkurat fått plantedilla, trenger hjelp</label>
+
+                    <input type="radio" id="role-nerd" name="role" value="nerd">
+                    <label for="role-nerd">Plantenerd, som vil slippe å tenke på vedlikehold</label>
+                  </div>
+                </fieldset>
+
+              </div>
+            </fieldset>
+            <button class="btn" type="submit">Send meg påminnelser</button>
+          </form>
+        </section>
+
+        <section id="funfacts" aria-labelledby="funfacts-title">
+          <h2 id="funfacts-title">Fun facts</h2>
+          <div class="cards cards--compact">
+            <article class="card">
+              <h3>Støv</h3>
+              <p>Støv på blader reduserer lysopptak. Tørk av med lett fuktig klut så plantene “ser” bedre.</p>
+            </article>
+            <article class="card">
+              <h3>Nye planter?</h3>
+              <p>Nye planter? Karantene 1–2 uker kan hindre at skadedyr sprer seg.</p>
+            </article>
+            <article class="card">
+              <h3>Vannrytme</h3>
+              <p>Overvanning tar livet av flest planter. La topplaget tørke 1–2 cm før du vanner.</p>
+            </article>
+            <article class="card">
+              <h3>Pottevalg</h3>
+              <p>Terrakotta tørker raskere; plast holder fukt lenger, velg etter plante og vaner.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="container" aria-label="Plante bilde">
+          <div class="media-plant">
+            <img src="https://github.com/LinnSandra/Plant/blob/main/IMG_7626.jpeg?raw=true" alt="Plantebilde 1">
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 — Spiire.</p>
+  </footer>
+</body>
+
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
